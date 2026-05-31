@@ -1,12 +1,8 @@
-# mtb_suspension_app.py
 import streamlit as st
 import pandas as pd
 import numpy as np
 
 st.set_page_config(page_title="MTB Suspension Setup", layout="centered")
-
-# Helper data & functions
-# -----------------------
 
 BRANDS = {
     "Algemeen / onbekend": 1.00,
@@ -32,5 +28,4 @@ def calc_sag_mm(travel_mm, sag_pct):
     return round(travel_mm * sag_pct / 100, 1)
 
 def base_pressure(weight_kg):
-    # eenvoudige baseline
     return round(weight_kg * 1.1, 1)
